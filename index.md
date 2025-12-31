@@ -51,7 +51,6 @@ Each data structure have following 5 operations:
 - [[Rabin-Karp Algorithm]]
 - [[Fisher-Yates Shuffle]]
 - [[Huffman Coding]]
-- [[Kruskal's Algorithm]]
 - [[Tarjan's Algorithm]]
 - [[Ford-Fulkerson Algorithm]]
 
