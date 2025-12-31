@@ -39,3 +39,9 @@ def fib_tab(n):
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
 ```
+
+## Related Algorithms
+- **Shortest Path**: [[Bellman-Ford Algorithm]], [[Floyd-Warshall Algorithm]]
+- **String Algorithms**: [[Knuth-Morris-Pratt (KMP) Algorithm]] (conceptually related to prefix property), [[Rabin-Karp Algorithm]]
+- **Graph**: Many graph problems are solved using DP.
+- **Recursion**: [[Divide and Conquer]] often overlaps with DP (DP is optimization of Divide and Conquer).
