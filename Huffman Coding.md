@@ -3,6 +3,9 @@
 > [!note] Description
 > Huffman coding is a popular technique used for lossless data compression. It assigns variable-length codes to input characters, lengths of the assigned codes are based on the frequencies of corresponding characters.
 
+## Intuition
+The intuition is efficiency through frequency. In a message, some characters appear way more often than others (like 'e' vs 'z' in English). It makes sense to give short binary codes (like `0` or `11`) to frequent characters and longer codes (like `10101`) to rare characters. This minimizes the total number of bits required to encode the message. We build a binary tree from the bottom up, combining the two least frequent nodes repeatedly, ensuring optimal code length assignment.
+
 ## Complexity
 - **Time Complexity**: $O(n \log n)$ where $n$ is number of unique characters.
 - **Space Complexity**: $O(n)$.

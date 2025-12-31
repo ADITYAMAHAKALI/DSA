@@ -43,7 +43,14 @@ stack.append('b')
 # 2. Delete (Pop)
 print(stack.pop()) # 'b'
 
-# Peek (View Top)
+# 3. Update (Update top)
 if stack:
-    print(stack[-1])
+    stack[-1] = 'c'
+
+# 4. Search
+if 'a' in stack:
+    print("Found")
+
+# 5. Sort
+stack.sort()
 ```

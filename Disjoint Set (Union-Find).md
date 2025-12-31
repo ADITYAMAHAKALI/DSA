@@ -40,9 +40,11 @@ Unites two sets.
 ```python
 class DisjointSet:
     def __init__(self, n):
+        # 1. Insert (Make Set implicitly during init)
         self.parent = list(range(n))
         self.rank = [0] * n
 
+    # 4. Search (Find)
     def find(self, i):
         if self.parent[i] != i:
             self.parent[i] = self.find(self.parent[i]) # Path compression
@@ -60,4 +62,16 @@ class DisjointSet:
             else:
                 self.parent[root_j] = root_i
                 self.rank[root_i] += 1
+
+    # 2. Delete (Not supported)
+    # 3. Update (Not supported)
+    # 5. Sort (Not applicable, but can group by component)
+    def get_components(self):
+        components = {}
+        for i in range(len(self.parent)):
+            root = self.find(i)
+            if root not in components:
+                components[root] = []
+            components[root].append(i)
+        return components
 ```

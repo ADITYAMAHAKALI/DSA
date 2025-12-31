@@ -40,6 +40,9 @@ hash_table = {}
 hash_table['key1'] = 'value1'
 hash_table['key2'] = 'value2'
 
+# 2. Delete
+del hash_table['key2']
+
 # 3. Update
 hash_table['key1'] = 'updated_value'
 
@@ -47,6 +50,6 @@ hash_table['key1'] = 'updated_value'
 if 'key1' in hash_table:
     print(hash_table['key1'])
 
-# 2. Delete
-del hash_table['key2']
+# 5. Sort (Keys)
+sorted_keys = sorted(hash_table.keys())
 ```

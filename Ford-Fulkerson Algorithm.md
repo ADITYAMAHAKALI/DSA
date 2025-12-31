@@ -3,6 +3,9 @@
 > [!note] Description
 > The Ford-Fulkerson method is a greedy algorithm that computes the maximum flow in a flow network.
 
+## Intuition
+The intuition is like sending water through a network of pipes. You want to send as much water as possible from a source to a sink. You look for any path that has available capacity (an "augmenting path"). If you find one, you push as much flow as that path allows (limited by the narrowest pipe). Pushing flow uses up capacity in the forward direction but creates "residual capacity" in the backward direction (allowing you to "undo" flow later if needed to find a better global solution). You keep finding paths and adding flow until no more paths exist.
+
 ## Complexity
 - **Time Complexity**: $O(E \times f)$ where $f$ is max flow value.
 - **Space Complexity**: $O(V + E)$.

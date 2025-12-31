@@ -32,18 +32,27 @@ Not applicable.
 
 ```python
 class FenwickTree:
+    # 1. Insert (Init/Build)
     def __init__(self, size):
         self.tree = [0] * (size + 1)
 
+    # 3. Update (Add delta to element at i)
     def update(self, i, delta):
         while i < len(self.tree):
             self.tree[i] += delta
             i += i & (-i)
 
+    # 4. Search (Prefix Sum Query)
     def query(self, i):
         s = 0
         while i > 0:
             s += self.tree[i]
             i -= i & (-i)
         return s
+
+    # 2. Delete (Simulate by adding negative value)
+    def delete(self, i, val):
+        self.update(i, -val)
+
+    # 5. Sort (Not applicable for BIT itself, maintains partial sums)
 ```

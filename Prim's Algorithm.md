@@ -3,6 +3,9 @@
 > [!note] Description
 > Prim's algorithm is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph. It operates by building this tree one vertex at a time, from an arbitrary starting vertex, at each step adding the cheapest possible connection from the tree to another vertex.
 
+## Intuition
+Prim's algorithm grows a single Minimum Spanning Tree (MST) from a starting vertex. It's like a mold spreading over a surface: it expands from the current boundary of the tree to the nearest unvisited node. At each step, we look at all edges connecting nodes inside the MST to nodes outside, and we pick the one with the smallest weight to add to the tree.
+
 ## Complexity
 - **Time Complexity**: $O(E + V \log V)$ with Min-Heap.
 - **Space Complexity**: $O(V)$.

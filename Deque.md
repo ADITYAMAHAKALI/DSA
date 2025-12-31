@@ -42,4 +42,18 @@ d.appendleft(2)    # Front
 # 2. Delete
 d.pop()            # Rear
 d.popleft()        # Front
+
+# Repopulate
+d.extend([1, 2, 3])
+
+# 3. Update (Index based)
+d[1] = 5
+
+# 4. Search
+if 5 in d:
+    print("Found")
+
+# 5. Sort
+# deque doesn't have sort, convert to list
+sorted_d = sorted(list(d))
 ```

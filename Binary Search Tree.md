@@ -43,6 +43,7 @@ class Node:
         self.right = None
         self.val = key
 
+# 1. Insert
 def insert(root, key):
     if root is None:
         return Node(key)
@@ -53,10 +54,47 @@ def insert(root, key):
             root.left = insert(root.left, key)
     return root
 
+# 4. Search
 def search(root, key):
     if root is None or root.val == key:
         return root
     if root.val < key:
         return search(root.right, key)
     return search(root.left, key)
+
+# 2. Delete
+def deleteNode(root, key):
+    if root is None: return root
+    if key < root.val:
+        root.left = deleteNode(root.left, key)
+    elif key > root.val:
+        root.right = deleteNode(root.right, key)
+    else:
+        if root.left is None:
+            return root.right
+        elif root.right is None:
+            return root.left
+        temp = minValueNode(root.right)
+        root.val = temp.val
+        root.right = deleteNode(root.right, temp.val)
+    return root
+
+def minValueNode(node):
+    current = node
+    while(current.left is not None):
+        current = current.left
+    return current
+
+# 3. Update
+def update(root, old_key, new_key):
+    root = deleteNode(root, old_key)
+    root = insert(root, new_key)
+    return root
+
+# 5. Sort (Inorder Traversal)
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val, end=' ')
+        inorder(root.right)
 ```

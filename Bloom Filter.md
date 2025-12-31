@@ -38,15 +38,21 @@ class BloomFilter:
         self.size = size
         self.hash_count = hash_count
 
+    # 1. Insert
     def add(self, string):
         for seed in range(self.hash_count):
             result = hash(string + str(seed)) % self.size
             self.bit_array[result] = 1
 
+    # 4. Search (Check membership)
     def check(self, string):
         for seed in range(self.hash_count):
             result = hash(string + str(seed)) % self.size
             if self.bit_array[result] == 0:
                 return False
         return True
+
+    # 2. Delete (Not supported in standard Bloom Filter)
+    # 3. Update (Not supported)
+    # 5. Sort (Not applicable)
 ```

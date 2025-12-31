@@ -49,4 +49,19 @@ print(heapq.heappop(h)) # 1
 
 # Peek Min
 print(h[0]) # 5
+
+# 3. Update (Decrease Key - tricky with standard heapq, need index)
+# Standard way: delete old, insert new OR re-heapify
+# Simple approach:
+h[0] = 2
+heapq.heapify(h) # O(n)
+
+# 4. Search
+if 10 in h:
+    print("Found")
+
+# 5. Sort (Heap Sort)
+sorted_arr = []
+while h:
+    sorted_arr.append(heapq.heappop(h))
 ```
