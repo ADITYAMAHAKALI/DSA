@@ -30,3 +30,9 @@ s = [1, 3, 0, 5, 8, 5]
 f = [2, 4, 6, 7, 9, 9]
 print_max_activities(s, f)
 ```
+
+## Related Algorithms
+- **Minimum Spanning Tree**: [[Prim's Algorithm]], [[Kruskal's Algorithm]]
+- **Shortest Path**: [[Dijkstra's Algorithm]]
+- **Compression**: [[Huffman Coding]]
+- **Vs Dynamic Programming**: [[Dynamic Programming]] (compares all choices vs one choice).

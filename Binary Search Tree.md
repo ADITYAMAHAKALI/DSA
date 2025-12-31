@@ -19,7 +19,7 @@ Delete old value, insert new value.
 - **Complexity**: $O(h)$.
 
 ### 4. Search element
-- **Complexity**: $O(h)$.
+- **Complexity**: $O(h)$. (See [[Binary Search]])
 
 ### 5. Sort the elements
 In-order traversal gives sorted elements.
@@ -98,3 +98,9 @@ def inorder(root):
         print(root.val, end=' ')
         inorder(root.right)
 ```
+
+## Related Data Structures
+- [[Heap]]: Another tree-based structure, but used for priority queues.
+- [[Trie]]: A tree-based structure for storing strings.
+- [[Segment Tree]]: A tree data structure for storing intervals or segments.
+- [[Fenwick Tree (Binary Indexed Tree)]]: A data structure that can efficiently update elements and calculate prefix sums in a table of numbers.

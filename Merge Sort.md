@@ -1,7 +1,7 @@
 # Merge Sort
 
 > [!note] Description
-> Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+> Merge Sort is a [[Divide and Conquer]] algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
 
 ## Intuition
 The intuition is that it is easier to sort two smaller arrays than one large array. Also, merging two already sorted arrays into a new sorted array is very efficient (linear time). By recursively splitting the array until we have subarrays of size 1 (which are inherently sorted) and then merging them back together in sorted order, we can sort the entire array efficiently.
@@ -43,3 +43,8 @@ def merge_sort(arr):
             j += 1
             k += 1
 ```
+
+## Related Algorithms
+- **Comparison**: [[Quick Sort]] (often faster in practice but not stable/worst case $O(n^2)$), [[Heap Sort]] (O(1) extra space).
+- **Paradigm**: [[Divide and Conquer]].
+- **Data Structure**: [[Array]] (Merge sort is good for linked lists too, unlike Quick Sort which is better for arrays).

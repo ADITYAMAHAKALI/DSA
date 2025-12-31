@@ -20,7 +20,7 @@
 ### 5. Sort the elements
 - **Complexity**: $O(n \log n)$.
 
-## Complexity Summary (Binary Heap)
+## Complexity Summary ([[Binary Heap]])
 
 | Operation | Time Complexity |
 | :--- | :--- |
@@ -70,3 +70,9 @@ temp_pq = pq[:] # Copy
 while temp_pq:
     sorted_list.append(heapq.heappop(temp_pq))
 ```
+
+## Related Data Structures
+- [[Heap]]: The most common implementation of a Priority Queue.
+- [[Queue]]: A similar structure but FIFO.
+- [[Stack]]: A similar structure but LIFO.
+- [[Graph]]: Used in algorithms like [[Dijkstra's Algorithm]], [[Prim's Algorithm]], [[A* Algorithm]].

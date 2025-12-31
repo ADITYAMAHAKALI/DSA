@@ -20,7 +20,7 @@
 - **Complexity**: $O(n)$ (Heaps are not optimized for searching arbitrary elements).
 
 ### 5. Sort the elements
-- **Complexity**: $O(n \log n)$ (Heap Sort).
+- **Complexity**: $O(n \log n)$ ([[Heap Sort]]).
 
 ## Complexity Summary
 
@@ -65,3 +65,8 @@ sorted_arr = []
 while h:
     sorted_arr.append(heapq.heappop(h))
 ```
+
+## Related Concepts
+- [[Priority Queue]]: Abstract data type often implemented using a Heap.
+- [[Heap Sort]]: Sorting algorithm using Heap.
+- [[Graph]]: Heaps are used in graph algorithms like [[Dijkstra's Algorithm]] and [[Prim's Algorithm]].

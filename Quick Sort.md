@@ -1,7 +1,7 @@
 # Quick Sort
 
 > [!note] Description
-> QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot.
+> QuickSort is a [[Divide and Conquer]] algorithm. It picks an element as a pivot and partitions the given array around the picked pivot.
 
 ## Intuition
 The core idea is to select a "pivot" element and partition the array such that all elements smaller than the pivot are on its left and all elements larger are on its right. Once the pivot is in its correct sorted position, we recursively apply the same logic to the left and right subarrays. This "divide and conquer" strategy rapidly sorts the array without needing auxiliary space for merging.
@@ -33,3 +33,7 @@ def quick_sort(arr, low, high):
         quick_sort(arr, low, pi - 1)
         quick_sort(arr, pi + 1, high)
 ```
+
+## Related Algorithms
+- **Comparison**: [[Merge Sort]] (Stable, guaranteed $O(n \log n)$), [[Heap Sort]] (Guaranteed $O(n \log n)$, $O(1)$ space).
+- **Paradigm**: [[Divide and Conquer]].

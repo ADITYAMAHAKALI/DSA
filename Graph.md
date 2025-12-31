@@ -15,10 +15,10 @@
 - **Complexity**: $O(1)$ if updating value at vertex/edge.
 
 ### 4. Search element (Traversal)
-- **Complexity**: $O(V+E)$ (BFS/DFS).
+- **Complexity**: $O(V+E)$ ([[Breadth-First Search (BFS)]]/[[Depth-First Search (DFS)]]).
 
 ### 5. Sort the elements
-Topological Sort for DAGs.
+[[Topological Sort]] for DAGs.
 - **Complexity**: $O(V+E)$.
 
 ## Complexity Summary
@@ -72,3 +72,10 @@ class Graph:
         # Implementation depends on DAG property
         pass
 ```
+
+## Related Algorithms
+
+- **Traversal**: [[Breadth-First Search (BFS)]], [[Depth-First Search (DFS)]]
+- **Shortest Path**: [[Dijkstra's Algorithm]], [[Bellman-Ford Algorithm]], [[Floyd-Warshall Algorithm]], [[A* Algorithm]]
+- **Minimum Spanning Tree**: [[Prim's Algorithm]], [[Kruskal's Algorithm]]
+- **Other**: [[Topological Sort]], [[Tarjan's Algorithm]], [[Ford-Fulkerson Algorithm]]
