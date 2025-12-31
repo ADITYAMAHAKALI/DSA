@@ -3,6 +3,9 @@
 > [!note] Description
 > A* (pronounced "A-star") is a graph traversal and path search algorithm, which is often used in many fields of computer science due to its completeness, optimality, and optimal efficiency. It uses heuristics to guide the search.
 
+## Intuition
+A* is an informed search algorithm, meaning it uses a "heuristic" (a smart guess) to estimate the cost from the current node to the goal. Unlike Dijkstra's which explores uniformly in all directions, A* prioritizes paths that appear to lead closer to the goal. It balances the actual cost traveled so far ($g(n)$) with the estimated cost to go ($h(n)$), minimizing the total estimated cost $f(n) = g(n) + h(n)$.
+
 ## Complexity
 - **Time Complexity**: Depends on the heuristic. In worst case, exponential.
 - **Space Complexity**: $O(V)$ (keeps all generated nodes in memory).

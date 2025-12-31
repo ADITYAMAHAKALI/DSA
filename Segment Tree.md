@@ -9,7 +9,7 @@
 - **Complexity**: $O(n)$.
 
 ### 2. Delete element
-Not typical. Rebuild or Update.
+Not typical. Rebuild or Update to neutral value.
 
 ### 3. Update element (Point Update)
 - **Complexity**: $O(\log n)$.
@@ -33,6 +33,8 @@ Not applicable.
 
 ```python
 # Simple Sum Segment Tree
+
+# 1. Insert (Build)
 def build(arr, tree, node, start, end):
     if start == end:
         tree[node] = arr[start]
@@ -42,6 +44,7 @@ def build(arr, tree, node, start, end):
         build(arr, tree, 2*node+1, mid+1, end)
         tree[node] = tree[2*node] + tree[2*node+1]
 
+# 3. Update
 def update(arr, tree, node, start, end, idx, val):
     if start == end:
         arr[idx] = val
@@ -54,6 +57,7 @@ def update(arr, tree, node, start, end, idx, val):
             update(arr, tree, 2*node+1, mid+1, end, idx, val)
         tree[node] = tree[2*node] + tree[2*node+1]
 
+# 4. Search (Range Query)
 def query(tree, node, start, end, l, r):
     if r < start or end < l:
         return 0
@@ -63,4 +67,10 @@ def query(tree, node, start, end, l, r):
     p1 = query(tree, 2*node, start, mid, l, r)
     p2 = query(tree, 2*node+1, mid+1, end, l, r)
     return p1 + p2
+
+# 2. Delete (Simulated by update to 0)
+def delete(arr, tree, node, start, end, idx):
+    update(arr, tree, node, start, end, idx, 0)
+
+# 5. Sort (Not applicable)
 ```

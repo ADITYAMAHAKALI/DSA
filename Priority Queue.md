@@ -41,9 +41,32 @@ heapq.heappush(pq, (2, 'code'))
 heapq.heappush(pq, (1, 'eat'))
 heapq.heappush(pq, (3, 'sleep'))
 
-# 2. Delete
+# 2. Delete (Pop Min)
+# Note: This also effectively Sorts if done repeatedly
 while pq:
     item = heapq.heappop(pq)
     print(item)
 # Output: (1, 'eat'), (2, 'code'), (3, 'sleep')
+
+# Re-populate for other operations
+pq = [(2, 'code'), (1, 'eat'), (3, 'sleep')]
+heapq.heapify(pq)
+
+# 3. Update (Change Priority)
+# Standard heapq doesn't support easy update.
+# Workaround: Mark old as removed (lazy deletion) or remove and re-insert (O(n))
+# Here is remove and re-insert approach:
+pq.remove((2, 'code')) # O(n)
+heapq.heappush(pq, (0, 'code')) # New priority 0
+
+# 4. Search
+if (1, 'eat') in pq:
+    print("Found")
+
+# 5. Sort
+# Heap Sort logic:
+sorted_list = []
+temp_pq = pq[:] # Copy
+while temp_pq:
+    sorted_list.append(heapq.heappop(temp_pq))
 ```

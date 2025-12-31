@@ -44,4 +44,18 @@ queue.append('b')
 
 # 2. Delete (Dequeue)
 print(queue.popleft()) # 'a'
+
+# 3. Update (Front element)
+if queue:
+    # Not directly supported in deque to update arbitrary index efficiently,
+    # but we can update by accessing index
+    queue[0] = 'z'
+
+# 4. Search
+if 'b' in queue:
+    print("Found")
+
+# 5. Sort
+# deque does not have a sort method, convert to list
+sorted_queue = sorted(list(queue))
 ```

@@ -38,12 +38,37 @@ class Graph:
     def __init__(self):
         self.graph = {}
 
+    # 1. Insert (Add Edge/Vertex)
     def add_edge(self, u, v):
         if u not in self.graph:
             self.graph[u] = []
         self.graph[u].append(v)
 
-    def print_graph(self):
-        for node in self.graph:
-            print(node, "->", " -> ".join(map(str, self.graph[node])))
+    # 4. Search (BFS)
+    def bfs(self, start):
+        visited = set()
+        queue = [start]
+        visited.add(start)
+        while queue:
+            vertex = queue.pop(0)
+            print(vertex, end=" ")
+            for neighbour in self.graph.get(vertex, []):
+                if neighbour not in visited:
+                    visited.add(neighbour)
+                    queue.append(neighbour)
+
+    # 2. Delete (Remove Edge)
+    def remove_edge(self, u, v):
+        if u in self.graph and v in self.graph[u]:
+            self.graph[u].remove(v)
+
+    # 3. Update (Update edge target - rarely done, usually remove and add)
+    def update_edge(self, u, old_v, new_v):
+        self.remove_edge(u, old_v)
+        self.add_edge(u, new_v)
+
+    # 5. Sort (Topological Sort - simplified)
+    def topological_sort(self):
+        # Implementation depends on DAG property
+        pass
 ```

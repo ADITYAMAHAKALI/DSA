@@ -3,6 +3,9 @@
 > [!note] Description
 > Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest. It is a greedy algorithm.
 
+## Intuition
+The intuition is simple: always pick the cheapest edge available that doesn't create a cycle. We sort all edges by weight and iterate through them. If an edge connects two previously unconnected components (which we track using a Disjoint Set Union data structure), we add it to our Minimum Spanning Tree (MST). This greedily builds the MST from the smallest edges up.
+
 ## Complexity
 - **Time Complexity**: $O(E \log E)$ or $O(E \log V)$.
 - **Space Complexity**: $O(V + E)$.

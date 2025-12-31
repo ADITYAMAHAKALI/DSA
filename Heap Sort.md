@@ -3,6 +3,9 @@
 > [!note] Description
 > Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the minimum element and place the minimum element at the beginning. We repeat the same process for the remaining elements.
 
+## Intuition
+Heap Sort treats the array as a binary heap (a tree structure where parent $\ge$ children). By first building a max-heap, we ensure the largest element is at the root. We swap this root with the last element of the unsorted portion, effectively placing the largest element in its correct sorted position at the end. We then reduce the heap size and "heapify" the root to maintain the max-heap property. Repeating this process moves the next largest element to the end, and so on, resulting in a sorted array.
+
 ## Complexity
 - **Time Complexity**: $O(n \log n)$.
 - **Space Complexity**: $O(1)$.

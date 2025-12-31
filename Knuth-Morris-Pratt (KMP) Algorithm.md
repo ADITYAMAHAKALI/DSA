@@ -3,6 +3,9 @@
 > [!note] Description
 > The Knuth-Morris-Pratt string-searching algorithm searches for occurrences of a "word" $W$ within a main "text string" $T$ by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin, thus bypassing re-examination of previously matched characters.
 
+## Intuition
+The intuition is to never move backward in the main text. When we match characters but then hit a mismatch, we don't want to start all over from the next character in the text (which would be slow). Instead, we use a pre-calculated "LPS" (Longest Prefix Suffix) array to know exactly how much of the pattern we've effectively already matched. This allows us to slide the pattern forward intelligently, skipping redundant comparisons.
+
 ## Complexity
 - **Time Complexity**: $O(N + M)$ where $N$ is text length, $M$ is pattern length.
 - **Space Complexity**: $O(M)$.

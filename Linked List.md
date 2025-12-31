@@ -68,4 +68,35 @@ class LinkedList:
             return
         prev.next = temp.next
         temp = None
+
+    # 3. Update (find key and update value)
+    def update(self, old_key, new_key):
+        temp = self.head
+        while temp:
+            if temp.data == old_key:
+                temp.data = new_key
+                return True
+            temp = temp.next
+        return False
+
+    # 4. Search (by key)
+    def search(self, key):
+        current = self.head
+        while current:
+            if current.data == key:
+                return True
+            current = current.next
+        return False
+
+    # 5. Sort (Bubble Sort for simplicity, usually Merge Sort is preferred)
+    def sort(self):
+        end = None
+        while end != self.head:
+            p = self.head
+            while p.next != end:
+                q = p.next
+                if p.data > q.data:
+                    p.data, q.data = q.data, p.data
+                p = p.next
+            end = p
 ```
