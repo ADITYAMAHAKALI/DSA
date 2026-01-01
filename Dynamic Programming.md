@@ -6,6 +6,28 @@
 ## Intuition
 The intuition behind Dynamic Programming is "don't repeat yourself." If you've already solved a subproblem (like calculating the 5th Fibonacci number), store that answer. When you need it again (like when calculating the 6th or 7th Fibonacci number), just look it up instead of recalculating it from scratch. This transforms exponential-time recursive solutions into efficient polynomial-time solutions.
 
+## Core DP Patterns
+
+- [[Linear DP]] (Fibonacci & Kadane's)
+- [[Knapsack Patterns]] (0/1, Unbounded, Subset Sum)
+- [[LCS and Strings]] (LCS, Edit Distance)
+- [[DP on Grids]] (Unique Paths, Min Path Sum)
+- [[Interval DP]] (MCM, Burst Balloons)
+- [[DP on Trees]] (House Robber III, Max Path Sum)
+- [[Bitmasking DP]] (TSP, Set Cover)
+- [[Digit DP]] (Counting numbers with properties)
+- [[State Machine DP]] (Stock Trading)
+
+## Advanced DP Patterns
+
+- [[Catalan Numbers]] (Unique BSTs, Parentheses)
+- [[SOS DP]] (Sum Over Subsets)
+- [[Binary Lifting]] (LCA, Path Queries)
+- [[Insertion DP]] (Permutations)
+- [[Probability and Expected Value DP]] (Knight Probability)
+- [[DP on Graphs]] (Cheapest Flights, Count Paths)
+- [[Advanced Digit DP]] (Complex Digit constraints)
+
 ## Key Concepts
 - **Overlapping Subproblems**: Solutions to same subproblems are needed again and again.
 - **Optimal Substructure**: Optimal solution of the given problem can be obtained by using optimal solutions of its subproblems.
