@@ -53,4 +53,6 @@ Each data structure have following 5 operations:
 - [[Huffman Coding]]
 - [[Tarjan's Algorithm]]
 - [[Ford-Fulkerson Algorithm]]
+- [[Bit Manipulation]]
+- [[Math Algorithms]]
 
